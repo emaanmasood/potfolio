@@ -139,7 +139,7 @@ function App() {
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-6 md:px-10">
 
 
-          <img className="h-14 w-auto" src="/logo.png" alt="logo" />
+          <img className="h-14 w-auto" src="logo.png" alt="logo" />
 
 
 
@@ -401,7 +401,7 @@ function App() {
 
               <div className="flip-card-front">
                 <img
-                  src="/emaan.png" alt="Emaan"
+                  src="emaan.png" alt="Emaan"
 
                   className="
                            absolute
