@@ -1,0 +1,92 @@
+@import "tailwindcss";
+html{
+  scroll-behavior: smooth;
+}
+body{
+  margin: 0;
+  background: #080808;
+  color: white;
+  font-family: arial, sans-serif;
+}
+@keyframes spin {
+  from{
+    transform: rotate(0deg);
+  }
+  to{
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  t0{
+   opacity: 1;
+  }
+}
+@keyframes slideUp {
+  from{
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to{
+    opacity: 1;
+    transform: translateY(0);
+
+  }
+}
+
+.flip-card {
+  perspective: 1200px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.flip-card-inner.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+ 
+}
+
+.flip-card-front {
+  transform: rotateY(0deg);
+}
+
+.flip-card-back {
+  overflow: hidden;
+  transform: rotateY(180deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: radial-gradient(
+    circle,
+    rgba(217, 255, 85, 0.08) 0%,
+    rgba(8, 8, 8, 0.7) 70%,
+    rgba(8, 8, 8, 0.95) 100%
+  );
+
+  border: 1px solid rgba(217, 255, 85, 0.25);
+
+  box-shadow:
+    0 0 35px rgba(217, 255, 85, 0.12),
+    inset 0 0 50px rgba(217, 255, 85, 0.04);
+}
